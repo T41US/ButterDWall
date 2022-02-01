@@ -1,17 +1,27 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'com.t41us'
+version '0.1'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    implementation 'org.webjars.bowergithub.gthmb:apod-request:0.0.7'
+    implementation 'com.github.lbovolini:ObjectMapper:0.2.3'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+}
+
+application {
+    getMainClass().set("com.t41us.Main")
 }
 
 test {
