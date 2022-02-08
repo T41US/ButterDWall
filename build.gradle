@@ -1,16 +1,18 @@
 plugins {
-    id 'java'
+    id "com.github.johnrengelman.shadow" version "7.1.2"
     id 'application'
+    id 'java'
 }
 
-group 'com.t41us'
-version '0.1'
+version = '0.1'
 
 repositories {
     mavenCentral()
+    gradlePluginPortal()
 }
 
 dependencies {
+    shadow 'junit:junit:3.8.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
     implementation 'org.webjars.bowergithub.gthmb:apod-request:0.0.7'
@@ -21,9 +23,5 @@ dependencies {
 }
 
 application {
-    getMainClass().set("com.t41us.Main")
-}
-
-test {
-    useJUnitPlatform()
+    mainClass = 'com.t41us.Main'
 }
