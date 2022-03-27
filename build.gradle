@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    shadow 'junit:junit:3.8.2'
+    shadow 'junit:junit:4.13.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
     implementation 'org.webjars.bowergithub.gthmb:apod-request:0.0.7'
