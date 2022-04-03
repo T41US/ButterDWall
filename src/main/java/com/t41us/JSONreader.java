@@ -24,6 +24,8 @@ public class JSONreader {
             },
             "status": "OK"
         }
+
+        key should be a thing in the results object, ex "sunrise"
         */
 
         try {
@@ -37,6 +39,14 @@ public class JSONreader {
             e.printStackTrace();
             System.out.println("params: " + "inputJson=" + inputJson + ", key = " + key);
         }
+    }
+
+    public static int[] getSunData() {
+        /*  wrapper class for parseSunData()
+        array format:
+                ["sunrise","sunset","solar_noon","day_length","civil_twilight_begin,"civil_twilight_end","nautical_twilight_begin","nautical_twilight_end","astronomical_twilight_begin","astronomical_twilight_end"]
+         */
+        return new int[1];
     }
 
     public static void test(String rawJson) {
